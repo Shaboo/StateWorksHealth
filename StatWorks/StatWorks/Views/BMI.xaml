@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             Title="BMI Calculator"
+             x:Class="StatWorks.Views.BMI">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="Beige" />
+
+                <Setter Property="HorizontalOptions"
+                        Value="Start" />
+
+                <Setter Property="FontSize"
+                        Value="Default" />
+
+                <Setter Property="Margin"
+                        Value="5" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="Margin"
+                        Value="50,0,50,0" />
+                <Setter Property="BackgroundColor"
+                        Value="Transparent" />
+                <Setter Property="TextColor"
+                        Value="Beige" />
+                <Setter Property="Keyboard"
+                        Value="Numeric" />
+            </Style>
+
+            <Style TargetType="yummy:PancakeView">
+                <Setter Property="Margin"
+                        Value="5" />
+
+                <Setter Property="BackgroundColor"
+                        Value="BlueViolet" />
+
+                <Setter Property="BackgroundGradientStartPoint"
+                        Value="0,0" />
+
+                <Setter Property="BackgroundGradientEndPoint"
+                        Value="1,1" />
+
+                <Setter Property="CornerRadius"
+                        Value="18,0,0,18" />
+
+                <Setter Property="HeightRequest"
+                        Value="100" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout IsVisible="{Binding IsNotBusy}">
+                    <yummy:PancakeView>
+                        <yummy:PancakeView.BackgroundGradientStops>
+                            <yummy:GradientStopCollection>
+                                <yummy:GradientStop Color="BlueViolet"
+                                                    Offset="0" />
+                                <yummy:GradientStop Color="AliceBlue"
+                                                    Offset="1" />
+                            </yummy:GradientStopCollection>
+                        </yummy:PancakeView.BackgroundGradientStops>
+                        <StackLayout>
+                            <Label Text="Weight" />
+                            
+                            <Entry x:Name="entWeight"
+                                   Placeholder="ex: 70.5"
+                                   Text="{Binding Weight}" />
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                    <yummy:PancakeView>
+                        <yummy:PancakeView.BackgroundGradientStops>
+                            <yummy:GradientStopCollection>
+                                <yummy:GradientStop Color="BlueViolet"
+                                                    Offset="0" />
+                                <yummy:GradientStop Color="AliceBlue"
+                                                    Offset="1" />
+                            </yummy:GradientStopCollection>
+                        </yummy:PancakeView.BackgroundGradientStops>
+                        <StackLayout>
+                            <Label Text="Height" />
+                            <Entry x:Name="entHeight"
+                                   Placeholder="ex: 170"
+                                   Text="{Binding Height}" />
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                    <yummy:PancakeView>
+                        <yummy:PancakeView.BackgroundGradientStops>
+                            <yummy:GradientStopCollection>
+                                <yummy:GradientStop Color="BlueViolet"
+                                                    Offset="0" />
+                                <yummy:GradientStop Color="AliceBlue"
+                                                    Offset="1" />
+                            </yummy:GradientStopCollection>
+                        </yummy:PancakeView.BackgroundGradientStops>
+                        <StackLayout>
+                            <Label Text="Gender" />
+                            <Picker ItemsSource="{Binding GenderItems}"
+                                    SelectedItem="{Binding SelectedGenderItem}"
+                                    Margin="25,0,25,0"
+                                    TextColor="Beige"
+                                    Title="Select Gender"
+                                    TitleColor="Beige" />
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                    <yummy:PancakeView>
+                        <yummy:PancakeView.BackgroundGradientStops>
+                            <yummy:GradientStopCollection>
+                                <yummy:GradientStop Color="BlueViolet"
+                                                    Offset="0" />
+                                <yummy:GradientStop Color="AliceBlue"
+                                                    Offset="1" />
+                            </yummy:GradientStopCollection>
+                        </yummy:PancakeView.BackgroundGradientStops>
+                        <StackLayout>
+                            <Label Text="Age" />
+                            <Entry x:Name="entAge"
+                                   Placeholder="ex: 25"
+                                   Text="{Binding Age}" />
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                    <yummy:PancakeView>
+                        <yummy:PancakeView.BackgroundGradientStops>
+                            <yummy:GradientStopCollection>
+                                <yummy:GradientStop Color="BlueViolet"
+                                                    Offset="0" />
+                                <yummy:GradientStop Color="AliceBlue"
+                                                    Offset="1" />
+                            </yummy:GradientStopCollection>
+                        </yummy:PancakeView.BackgroundGradientStops>
+                        <StackLayout>
+                            <Label Text="Waist" />
+                            <Entry x:Name="entWaist"
+                                   Placeholder="ex: 24.00"
+                                   Text="{Binding Waist}" />
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                    <yummy:PancakeView>
+                        <yummy:PancakeView.BackgroundGradientStops>
+                            <yummy:GradientStopCollection>
+                                <yummy:GradientStop Color="BlueViolet"
+                                                    Offset="0" />
+                                <yummy:GradientStop Color="AliceBlue"
+                                                    Offset="1" />
+                            </yummy:GradientStopCollection>
+                        </yummy:PancakeView.BackgroundGradientStops>
+                        <StackLayout>
+                            <Label Text="Hip" />
+                            <Entry x:Name="entHip"
+                                   Placeholder="ex: 40.0"
+                                   Text="{Binding Hip}" />
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                    <Button x:Name="btnSubmit"
+                            Text="Submit"
+                            BackgroundColor="Violet"
+                            BorderColor="Blue"
+                            BorderWidth="3"
+                            Command="{ Binding SubmitCommand }"
+                            HorizontalOptions="Center" />
+                </StackLayout>
+                <ActivityIndicator Color="OrangeRed"
+                                   IsRunning="{Binding IsBusy}"
+                                   IsVisible="{Binding IsBusy}" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

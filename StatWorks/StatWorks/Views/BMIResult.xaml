@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             Title="BMI Results"
+             x:Class="StatWorks.Views.BMIResult">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="Beige" />
+
+                <Setter Property="HorizontalOptions"
+                        Value="Start" />
+
+                <Setter Property="FontSize"
+                        Value="Small" />
+
+                <Setter Property="Margin"
+                        Value="5" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="Margin"
+                        Value="75,0,75,0" />
+                <Setter Property="BackgroundColor"
+                        Value="Transparent" />
+                <Setter Property="TextColor"
+                        Value="Beige" />
+            </Style>
+
+            <Style TargetType="yummy:PancakeView">
+                <Setter Property="Margin"
+                        Value="15" />
+
+                <Setter Property="BackgroundColor"
+                        Value="Pink" />
+
+                <Setter Property="BackgroundGradientStartPoint"
+                        Value="0,0" />
+
+                <Setter Property="BackgroundGradientEndPoint"
+                        Value="1,1" />
+
+                <Setter Property="CornerRadius"
+                        Value="18,0,0,18" />
+
+                <Setter Property="HeightRequest"
+                        Value="250" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <yummy:PancakeView>
+                    <yummy:PancakeView.BackgroundGradientStops>
+                        <yummy:GradientStopCollection>
+                            <yummy:GradientStop Color="DeepPink"
+                                                Offset="0" />
+                            <yummy:GradientStop Color="AliceBlue"
+                                                Offset="1" />
+                        </yummy:GradientStopCollection>
+                    </yummy:PancakeView.BackgroundGradientStops>
+                    <StackLayout>
+                        <Label Text="BMI"
+                               FontSize="Large" />
+                        <Grid RowDefinitions="Auto,Auto,Auto,Auto"
+                              ColumnDefinitions="3*,7*">
+                            <Label Grid.Row="0"
+                                   Grid.Column="0"
+                                   Text="Value" />
+
+                            <Label Grid.Row="0"
+                                   Grid.Column="1"
+                                   Text="{Binding bmi.value}" />
+
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Text="Status" />
+
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding bmi.status}" />
+
+                            <Label Grid.Row="2"
+                                   Grid.Column="0"
+                                   Text="Risk" />
+
+                            <Label Grid.Row="2"
+                                   Grid.Column="1"
+                                   Text="{Binding bmi.risk}" />
+
+                            <Label Grid.Row="3"
+                                   Grid.Column="0"
+                                   Text="Prime" />
+
+                            <Label Grid.Row="3"
+                                   Grid.Column="1"
+                                   Text="{Binding bmi.prime}" />
+                        </Grid>
+                        
+                        <Entry Placeholder="ex: 70.5"
+                               Text="{Binding Weight}" />
+                    </StackLayout>
+                </yummy:PancakeView>
+
+                <yummy:PancakeView HeightRequest="100">
+                    <yummy:PancakeView.BackgroundGradientStops>
+                        <yummy:GradientStopCollection>
+                            <yummy:GradientStop Color="DeepPink"
+                                                Offset="0" />
+                            <yummy:GradientStop Color="AliceBlue"
+                                                Offset="1" />
+                        </yummy:GradientStopCollection>
+                    </yummy:PancakeView.BackgroundGradientStops>
+
+                    <StackLayout>
+                        <Label Text="Ideal Weight"
+                               FontSize="Large" />
+
+                        <Label Text="{Binding ideal_weight}" />
+                    </StackLayout>
+                </yummy:PancakeView>
+
+                <yummy:PancakeView HeightRequest="100">
+                    <yummy:PancakeView.BackgroundGradientStops>
+                        <yummy:GradientStopCollection>
+                            <yummy:GradientStop Color="DeepPink"
+                                                Offset="0" />
+                            <yummy:GradientStop Color="AliceBlue"
+                                                Offset="1" />
+                        </yummy:GradientStopCollection>
+                    </yummy:PancakeView.BackgroundGradientStops>
+
+                    <StackLayout>
+                        <Label Text="Surface Area"
+                               FontSize="Large" />
+
+                        <Label Text="{Binding surface_area}" />
+                    </StackLayout>
+                </yummy:PancakeView>
+
+                <yummy:PancakeView HeightRequest="100">
+                    <yummy:PancakeView.BackgroundGradientStops>
+                        <yummy:GradientStopCollection>
+                            <yummy:GradientStop Color="DeepPink"
+                                                Offset="0" />
+                            <yummy:GradientStop Color="AliceBlue"
+                                                Offset="1" />
+                        </yummy:GradientStopCollection>
+                    </yummy:PancakeView.BackgroundGradientStops>
+
+                    <StackLayout>
+                        <Label Text="Ponderal Index"
+                               FontSize="Large" />
+                        
+                        <Label Text="{Binding ponderal_index}" />
+                    </StackLayout>
+                </yummy:PancakeView>
+
+                <yummy:PancakeView HeightRequest="100">
+                    <yummy:PancakeView.BackgroundGradientStops>
+                        <yummy:GradientStopCollection>
+                            <yummy:GradientStop Color="DeepPink"
+                                                Offset="0" />
+                            <yummy:GradientStop Color="AliceBlue"
+                                                Offset="1" />
+                        </yummy:GradientStopCollection>
+                    </yummy:PancakeView.BackgroundGradientStops>
+
+                    <StackLayout>
+                        <Label Text="BMR"
+                               FontSize="Large" />
+
+                        <Label Text="{Binding bmr.value}" />
+                    </StackLayout>
+                </yummy:PancakeView>
+
+                <yummy:PancakeView HeightRequest="120">
+                    <yummy:PancakeView.BackgroundGradientStops>
+                        <yummy:GradientStopCollection>
+                            <yummy:GradientStop Color="DeepPink"
+                                                Offset="0" />
+                            <yummy:GradientStop Color="AliceBlue"
+                                                Offset="1" />
+                        </yummy:GradientStopCollection>
+                    </yummy:PancakeView.BackgroundGradientStops>
+                    <StackLayout>
+                        <Label Text="WHR"
+                               FontSize="Large" />
+                        <Grid RowDefinitions="Auto,Auto"
+                              ColumnDefinitions="3*,7*">
+                            <Label Grid.Row="0"
+                                   Grid.Column="0"
+                                   Text="Value" />
+
+                            <Label Grid.Row="0"
+                                   Grid.Column="1"
+                                   Text="{Binding whr.value}" />
+
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Text="Status" />
+
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding whr.status}" />
+                        </Grid>
+                    </StackLayout>
+                </yummy:PancakeView>
+
+                <yummy:PancakeView HeightRequest="120">
+                    <yummy:PancakeView.BackgroundGradientStops>
+                        <yummy:GradientStopCollection>
+                            <yummy:GradientStop Color="DeepPink"
+                                                Offset="0" />
+                            <yummy:GradientStop Color="AliceBlue"
+                                                Offset="1" />
+                        </yummy:GradientStopCollection>
+                    </yummy:PancakeView.BackgroundGradientStops>
+                    <StackLayout>
+                        <Label Text="WHTR"
+                               FontSize="Large" />
+                        <Grid RowDefinitions="Auto,Auto"
+                              ColumnDefinitions="3*,7*">
+                            <Label Grid.Row="0"
+                                   Grid.Column="0"
+                                   Text="Value" />
+
+                            <Label Grid.Row="0"
+                                   Grid.Column="1"
+                                   Text="{Binding whtr.value}" />
+
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Text="Status" />
+
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding whtr.status}" />
+                        </Grid>
+                    </StackLayout>
+                </yummy:PancakeView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

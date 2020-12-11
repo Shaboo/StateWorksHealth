@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatWorks.Android", "StatWorks\StatWorks.Android\StatWorks.Android.csproj", "{162FC9FE-C58A-43F5-9D04-379D83F64B45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatWorks", "StatWorks\StatWorks\StatWorks.csproj", "{C7DB0CE6-315F-47EA-9BE4-E96B96B3362E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{162FC9FE-C58A-43F5-9D04-379D83F64B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162FC9FE-C58A-43F5-9D04-379D83F64B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162FC9FE-C58A-43F5-9D04-379D83F64B45}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{162FC9FE-C58A-43F5-9D04-379D83F64B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162FC9FE-C58A-43F5-9D04-379D83F64B45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162FC9FE-C58A-43F5-9D04-379D83F64B45}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C7DB0CE6-315F-47EA-9BE4-E96B96B3362E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7DB0CE6-315F-47EA-9BE4-E96B96B3362E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7DB0CE6-315F-47EA-9BE4-E96B96B3362E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C7DB0CE6-315F-47EA-9BE4-E96B96B3362E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7DB0CE6-315F-47EA-9BE4-E96B96B3362E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7DB0CE6-315F-47EA-9BE4-E96B96B3362E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {782FFE6F-020D-4306-9B46-345A5CD7DA65}
+	EndGlobalSection
+EndGlobal
